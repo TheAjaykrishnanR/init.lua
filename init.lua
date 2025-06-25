@@ -51,7 +51,10 @@ vim.keymap.set("n", "xx", "yydd")
 vim.keymap.set("n", "<C-k>", ":move .-2<CR>==", { noremap = true, silent = true })
 -- move line down
 vim.keymap.set("n", "<C-j>", ":move .+1<CR>==", { noremap = true, silent = true })
+-- goto last jumped line in history: <Ctrl-O> remap to <gl>
+vim.keymap.set('n', 'gl', '<C-O>', { noremap = true, silent = true })
 
+-- custom keymaps end
 
 vim.diagnostic.config({ virtual_text = false })
 vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
